@@ -22,7 +22,7 @@
           <li><a href="#">Art and Design</a></li>
           <li><a href="#">Music</a></li>
           <li><a href="#">Articles</a></li>
-          <li><a href="#">New Selfle</a></li>
+          <li><a href="#">New Selfle...</a></li>
           <li class="divider"></li>
           <li><a href="#">Discover Your Selfle</a></li>
           <li class="divider"></li>
@@ -36,7 +36,7 @@
         <% if user_signed_in? %>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Know Thy Selful <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li><a href="#">Account</a></li>
+            <li><%= link_to "Account Settings", edit_user_registration_path%></li>
             <li><a href="#">Discover Your Selfle</a></li>
             <li><a href="#">Share Your Selfle</a></li>
             <li class="divider"></li>
