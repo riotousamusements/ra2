@@ -6,6 +6,7 @@
         <% if user_signed_in? %>
 
           <%= link_to 'New Marble', new_pin_path, class: "btn btn-warning btn-lg"%>
+        
       </p>
       </div>
     </div>
@@ -26,7 +27,7 @@
         <tr>
           <% if pin.user == current_user %>
           <td><%= pin.description %></td>
-          <td><%= pin.user.email if pin.user %></td>
+          <td><%= pin.user.email %></td>
           <td><%= link_to 'Show', pin %></td>
             <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
             <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
