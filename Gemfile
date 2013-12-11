@@ -10,6 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'devise', '~> 3.2.0'
+gem 'auto_html'
+gem 'embedly'
+gem 'paperclip', '~> 3.0'
 
 group :development, :test do
 	gem 'sqlite3'

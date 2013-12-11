@@ -15,6 +15,9 @@
     <thead>
       <tr>
         <th>Don't Lose Your Marbles.</th>
+        <td>Image</td>
+        <td>Created</td>
+        <td>Description</td>
         <td>User</td>
         <th></th>
         <th></th>
@@ -26,9 +29,12 @@
       <% @pins.each do |pin| %>
         <tr>
           <% if pin.user == current_user %>
-          <td><%= pin.description %></td>
-          <td><%= pin.user.email %></td>
-          <td><%= link_to 'Show', pin %></td>
+            <td></td>
+            <td><%= image_tag pin.image.url(:medium) %></td>
+            <td><%= pin.created_at %></td>
+            <td><%= pin.description %></td>
+            <td><%= pin.user.email %></td>
+            <td><%= link_to 'Show', pin %></td>
             <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
             <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
