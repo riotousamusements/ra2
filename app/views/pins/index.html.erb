@@ -2,51 +2,25 @@
 <div align="center">
 
   <h1>Discover Your Selfle</h1>
-      <p>
-        <% if user_signed_in? %>
+</div>
+</div>
 
-          <%= link_to 'New Marble', new_pin_path, class: "btn btn-warning btn-lg"%>
-        
-      </p>
-      </div>
-    </div>
+<br>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Don't Lose Your Marbles.</th>
-        <td>Image</td>
-        <td>Created</td>
-        <td>Description</td>
-        <td>User</td>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @pins.each do |pin| %>
-        <tr>
-          <% if pin.user == current_user %>
-            <td></td>
-            <td><%= image_tag pin.image.url(:medium) %></td>
-            <td><%= pin.created_at %></td>
-            <td><%= pin.description %></td>
-            <td><%= pin.user.email %></td>
-            <td><%= link_to 'Show', pin %></td>
-            <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-
-        </tr>
+<div id="pins" class="transitions-enabled">
+  <% @pins.each do |pin| %>
+      <% if pin.user == current_user %>
+        <div class="box panel panel-default panel-heading">
+          <%= image_tag pin.image.url(:medium) %>
+          <div class="panel-body">
+            <%= pin.created_at %>
+            <%= pin.description %>
+            <%= pin.user.email %>
+            <%= link_to 'Show', pin %>
+            <%= link_to 'Edit', edit_pin_path(pin) %>
+            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
-
-  <br>
-  
-    <%= link_to 'New Marble', new_pin_path, class: "btn btn-warning btn-lg"%>
-      <% end %>
-
+  <% end %>
 </div>
