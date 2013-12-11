@@ -13,6 +13,7 @@ gem 'devise', '~> 3.2.0'
 gem 'auto_html'
 gem 'embedly'
 gem 'paperclip', '~> 3.0'
+gem 'aws-sdk', '~> 1.20.0'
 
 group :development, :test do
 	gem 'sqlite3'
