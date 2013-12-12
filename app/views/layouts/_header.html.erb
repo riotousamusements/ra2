@@ -19,7 +19,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Selfles <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Discover Your Selfle</a></li>
+          <li><a href="pins#index">Discover Your Selfle</a></li>
           <li class="divider"></li>
           <li><a href="#">Art and Design</a></li>
           <li><a href="#">Music</a></li>
@@ -32,7 +32,11 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-        <li><%= link_to 'New Marble', new_pin_path %></li>
+        <li>
+          <%= link_to new_pin_path do %>
+            <span class="glyphicon glyphicon-plus"></span> New Marble.
+          <% end %>
+        </li>
       <% end %>
       <li><a href="#">Contact Us</a></li>
       <li class="dropdown">
