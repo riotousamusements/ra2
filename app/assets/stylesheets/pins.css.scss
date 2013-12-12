@@ -4,13 +4,17 @@
 
 #pins {
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .box {
 	margin: 5px;
 	width: 214px;
+    border-radius: 5px;
 }
 
 .box img {
 	width: 100%;
+	height: auto;
+	border-radius: 5px;
 }
