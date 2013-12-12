@@ -18,7 +18,7 @@ class PinsController < ApplicationController
   end
 
   def create
-    @pin = current_user.pins.new(pin_params)
+    @pin = current_user.pins.new(params[:pin])
     if @pin.save
       redirect_to @pin, notice: 'You successfully created your Marble.'
     else
