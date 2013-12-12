@@ -20,7 +20,7 @@ class PinsController < ApplicationController
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
-      redirect_to @pin, notice: 'Marble successfully created.'
+      redirect_to @pin, notice: 'You successfully created your Marble.'
     else
       render action: 'new'
     end
@@ -45,8 +45,8 @@ class PinsController < ApplicationController
       @pin = Pin.find(params[:id])
     end
 
-  def correct_user
-       @pin = current_user.pins.find_by(id: params[:id])
+    def correct_user
+      @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice: "Not authorized to edit this Marble." if @pin.nil?
     end
 
