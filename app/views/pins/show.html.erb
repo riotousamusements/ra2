@@ -2,11 +2,18 @@
 	<div class="col-md-offset-2 col-md-8">
 		<div class="panel panel-default">
 			<div class="panel-heading center">
-				<%= image_tag @pin.image.url (:medium) %>
-				<div class="panel-body">
-				<p><%= @pin.description %></p>
-				<p><%= @pin.created_at.strftime("%d %B %Y") %>
-            	<%= @pin.created_at.strftime("%H:%M") %></p>
+				<% if @pin.image.present? %>
+					<%= image_tag @pin.image.url (:medium) %>
+					<div class="panel-body">
+					<p><%= @pin.description %></p>
+					<p><%= @pin.created_at.strftime("%d %B %Y") %>
+	            	<%= @pin.created_at.strftime("%H:%M") %></p>
+            	<% else %>
+            		<h2>"<%= @pin.description %>"</h2><br>
+            		<div class="panel-body">
+            		<p><%= @pin.created_at.strftime("%d %B %Y") %>
+	            	<%= @pin.created_at.strftime("%H:%M") %></p>
+	            <% end %>
 				
 				<p>
 					<%= link_to pins_path do %>
