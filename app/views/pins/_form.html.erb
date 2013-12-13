@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<br>
+  <h3>Image Marble.</h3>
   <div class="panel-footer">
     <div class="form-group">
       <%= f.label :image %>
@@ -23,6 +25,16 @@
     </div>
   </div>
 
+<br>
+  <h3>Text Marble.</h3>
+  <div class="panel-footer">
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+  </div>
+
+<br>
   <div class="actions">
     <%= f.submit :"Create Marble", class: "btn btn-warning btn-lg" %>
   </div>
