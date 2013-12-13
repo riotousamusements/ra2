@@ -18,6 +18,7 @@
               <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% else %>
             <div class="panel-footer">
+              <%= link_to 'Show', @pin %> 
               <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% end %>
             <div class="panel-footer">
