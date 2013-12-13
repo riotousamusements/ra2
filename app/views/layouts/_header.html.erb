@@ -18,14 +18,17 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Marbles. <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><%= link_to "Discover Your Selfle", pins_path%></li>
+          <li><%= link_to "Discover Your Selfle.", pins_path%></li>
           <li class="divider"></li>
-          <li><a href="#">Art and Design</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">New Selfle...</a></li>
+          <li><a href="#">Image Marbles.</a></li>
+          <li><a href="#">Text Marbles.</a></li>
+          <li><a href="#">Web Marbles.</a></li>
           <li class="divider"></li>
-          <li><a href="#">Share Your Selfle</a></li>
+          <li>
+            <%= link_to new_pin_path do %>
+              <span class="glyphicon glyphicon-plus-sign"></span> New Marble.
+            <% end %>
+          </li>
         </ul>
       </li>
     </ul>
