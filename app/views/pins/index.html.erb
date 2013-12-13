@@ -15,12 +15,10 @@
           <% if pin.image.present? %>
             <div class="panel-footer">
               <p><%= pin.description %></p>
-              <p><%= pin.created_at.strftime("%d %B %Y") %>
-              <%= pin.created_at.strftime("%H:%M") %></p>
+              <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% else %>
             <div class="panel-footer">
-              <p><%= pin.created_at.strftime("%d %B %Y") %>
-              <%= pin.created_at.strftime("%H:%M") %></p>
+              <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% end %>
             <div class="panel-footer">
               <%= link_to edit_pin_path(pin) do %>

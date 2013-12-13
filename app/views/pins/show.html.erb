@@ -6,13 +6,11 @@
 					<%= image_tag @pin.image.url (:medium) %>
 					<div class="panel-body">
 					<p><%= @pin.description %></p>
-					<p><%= @pin.created_at.strftime("%d %B %Y") %>
-	            	<%= @pin.created_at.strftime("%H:%M") %></p>
+					<p><%= @pin.created_at.strftime("%d %B %Y") %></p>
             	<% else %>
             		<h2>"<%= @pin.description %>"</h2><br>
             		<div class="panel-body">
-            		<p><%= @pin.created_at.strftime("%d %B %Y") %>
-	            	<%= @pin.created_at.strftime("%H:%M") %></p>
+            		<p><%= @pin.created_at.strftime("%d %B %Y") %></p>
 	            <% end %>
 				
 				<p>
