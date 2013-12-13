@@ -1,3 +1,10 @@
+<style type="text/css">
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: #FAFACA;}
+</style>
+
 <div class="well center">
   <h1>Discover Your Selfle.</h1>
 </div>
@@ -7,12 +14,12 @@
       <% if pin.user == current_user %>
           <% if pin.image.present? %>
           <div class="box panel panel-default">
-              <%= link_to image_tag(pin.image.url(:medium)), pin %>
+            <%= link_to image_tag(pin.image.url(:medium)), pin %>
           <% else %>
             <div class="box panel-footer panel-warning">
               <h3>"<%=pin.description %>"</h3>
               <div align="right">
-                <%= link_to pin do %> 
+                <%= link_to pin do %>
                   <span class="glyphicon glyphicon-zoom-in"></span>
                 <% end %>
               </div>
