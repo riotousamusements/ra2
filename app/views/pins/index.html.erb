@@ -10,7 +10,13 @@
               <%= link_to image_tag(pin.image.url(:medium)), pin %>
           <% else %>
             <div class="box panel-footer panel-warning">
-              <h3>"<%=pin.description %>"</h3><br>
+              <h3>"<%=pin.description %>"</h3>
+              <div align="right">
+                <%= link_to pin do %>
+                  <span class="glyphicon glyphicon-zoom-in"></span>
+                <% end %>
+              </div>
+              <br>
           <% end %>
           <% if pin.image.present? %>
             <div class="panel-footer">
@@ -18,14 +24,13 @@
               <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% else %>
             <div class="panel-footer">
-              <%= link_to 'Show', @pin %> 
               <p><%= pin.created_at.strftime("%d %B %Y") %></p>
           <% end %>
             <div class="panel-footer">
-              <%= link_to edit_pin_path(pin) do %>
+              <%= link_to show_pin_path(pin) do %>
                 <span class="glyphicon glyphicon-edit"></span>
                 Edit
-      <% end %>
+              <% end %>
                  |
                 <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' }  do %>
                   <span class="glyphicon glyphicon-trash"></span>
