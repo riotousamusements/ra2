@@ -11,9 +11,12 @@
           <% else %>
             <div class="box panel-footer panel-warning">
               <h3>"<%=pin.description %>"</h3>
-              <%= link_to pin do %> 
-                <span class="glyphicon glyphicon-zoom-in"></span>
-              <% end %>
+              <div align="right">
+                <%= link_to pin do %> 
+                  <span class="glyphicon glyphicon-zoom-in"></span>
+                <% end %>
+              </div>
+
               <br>
           <% end %>
           <% if pin.image.present? %>
