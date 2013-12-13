@@ -1,5 +1,4 @@
 Riotousamusements::Application.routes.draw do
-  get "pages/contact"
   resources :pins
 
   devise_for :users
