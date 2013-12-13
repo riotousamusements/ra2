@@ -5,8 +5,13 @@
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
       <% if pin.user == current_user %>
-        <div class="box panel panel-default">
-            <%= link_to image_tag(pin.image.url(:medium)), pin %>
+          <% if pin.image.present? %>
+          <div class="box panel panel-default">
+              <%= link_to image_tag(pin.image.url(:medium)), pin %>
+          <% else %>
+            <div class="box panel panel-default">
+              <h2>"<%=pin.description %>"</h2>
+        <% end %>
           <div class="panel-footer">
             <p><%= pin.description %></p>
             <p><%= pin.created_at.strftime("%d %B %Y") %>
